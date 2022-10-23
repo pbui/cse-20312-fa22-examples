@@ -36,7 +36,7 @@ class PriorityQueue:
         self.data.append(item)
         self.data.sort()
 
-    def dequeue(self):
+    def dequeue(self):              # Method: Pop largest item from Priority Queue
         ''' Remove and return largest element from the Priority Queue.
         >>> pq = PriorityQueue([3, 1 ,4]); pq.dequeue()
         4
@@ -49,8 +49,8 @@ class PriorityQueue:
         '''
         return self.data.pop()
 
-    def empty(self):
-        ''' Return whether or not the queue is empty. 
+    def empty(self):                # Method: Whether or not Priority Queue is empty
+        ''' Return whether or not the Priority Queue is empty. 
 
         >>> pq = PriorityQueue(); pq.empty()
         True
