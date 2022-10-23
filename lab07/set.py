@@ -4,7 +4,7 @@
 Title:      priority_queue.py
 Abstract:   Implement a set using a linked-based binary tree.
 Author:     Domer McDomerson
-Email:      dmcdomers@nd.edu
+Email:      dmcdomer@nd.edu
 Estimate:   25 minutes
 Date:       10/25/2022
 Questions:
