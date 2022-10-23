@@ -14,43 +14,43 @@ class PriorityQueue:
 
         >>> pq = PriorityQueue(); pq.data
         []
-        
+
         >>> pq = PriorityQueue([3, 1, 4]); pq.data[0]
         1
         '''
         self.data = data if data else []
         self.data.sort()
 
-    def enqueue(self, item):        # Method: Push item into Priority Queue
-        ''' Add item to Priority Queue. 
+    def push(self, item):
+        ''' Add item to Priority Queue.
 
-        >>> pq = PriorityQueue(); pq.enqueue(3); pq.data[-1] 
+        >>> pq = PriorityQueue(); pq.push(3); pq.data[-1]
         3
-        
-        >>> pq.enqueue(1); pq.data[-1]
+
+        >>> pq.push(1); pq.data[-1]
         3
-        
-        >>> pq.enqueue(4); pq.data[-1]
+
+        >>> pq.push(4); pq.data[-1]
         4
         '''
         self.data.append(item)
         self.data.sort()
 
-    def dequeue(self):              # Method: Pop largest item from Priority Queue
+    def pop(self):
         ''' Remove and return largest element from the Priority Queue.
-        >>> pq = PriorityQueue([3, 1 ,4]); pq.dequeue()
+        >>> pq = PriorityQueue([3, 1 ,4]); pq.pop()
         4
 
-        >>> pq.dequeue()
+        >>> pq.pop()
         3
-        
-        >>> pq.dequeue()
+
+        >>> pq.pop()
         1
         '''
         return self.data.pop()
 
-    def empty(self):                # Method: Whether or not Priority Queue is empty
-        ''' Return whether or not the Priority Queue is empty. 
+    def empty(self):
+        ''' Return whether or not the Priority Queue is empty.
 
         >>> pq = PriorityQueue(); pq.empty()
         True
