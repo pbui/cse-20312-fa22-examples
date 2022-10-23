@@ -2,7 +2,7 @@
 
 '''
 Title:      priority_queue.py
-Abstract:   Implement a Set using an linked-based binary tree.
+Abstract:   Implement a set using a linked-based binary tree.
 Author:     Domer McDomerson
 Email:      dmcdomers@nd.edu
 Estimate:   25 minutes
@@ -31,6 +31,7 @@ class Node:
     pass
 
 class Set:
+    ''' Simple set using a linked-based binary tree. '''
 
     def __init__(self, root):
         ''' Initialize internal binary tree. 

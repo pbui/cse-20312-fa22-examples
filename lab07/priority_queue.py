@@ -2,7 +2,7 @@
 
 '''
 Title:      priority_queue.py
-Abstract:   Implement a Priority Queue using an array-based binary tree.
+Abstract:   Implement a priority queue using an array-based binary tree.
 Author:     Domer McDomerson
 Email:      dmcdomers@nd.edu
 Estimate:   25 minutes
@@ -27,6 +27,7 @@ from collections import deque
 # Classes
 
 class PriorityQueue:
+    ''' Simple priority queue using an array-based binary tree. '''
 
     def __init__(self, tree):
         ''' Initialize internal binary tree.
@@ -37,7 +38,7 @@ class PriorityQueue:
         pass
 
     def pop(self):
-        ''' Return the largest value in PriorityQueue.
+        ''' Return the largest value in priority queue.
 
         Walk tree using BFS to find largest value, place 0 in its place, and
         then return largest value.
