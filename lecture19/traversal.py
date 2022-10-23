@@ -5,10 +5,10 @@
 This demonstrates traversing a tree using DFS and BFS.
 '''
 
-# Classes
-
 from dataclasses import dataclass
 from collections import deque
+
+# Classes
 
 @dataclass
 class Node:
