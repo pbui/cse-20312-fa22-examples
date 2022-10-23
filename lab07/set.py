@@ -48,7 +48,7 @@ class Set:
         '''
         pass
 
-    def search_r(self, node, value):
+    def _search(self, node, value):
         ''' Return whether or not value is contained within the set.
 
         Walk tree using DFS to find value and return True if found (otherwise
