@@ -13,6 +13,9 @@ import sys
 def heap_sort(data):
     ''' Order the items in data by using a binary heap to perform heap sort.
 
+    Time:  O(nlogn)
+    Space: O(n)
+
     >>> heap_sort([3, 0, 0, 6, 2])
     [0, 0, 2, 3, 6]
     '''
