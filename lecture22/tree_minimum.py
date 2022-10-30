@@ -34,7 +34,7 @@ def tree_minimum(node):
 
 # Main Execution
 
-if __name__ == '__main__':
+def main():
     # Create tree
     root = Node(7,
         Node(6,
@@ -47,3 +47,6 @@ if __name__ == '__main__':
 
     # Compute minimum of tree
     print(tree_minimum(root))
+
+if __name__ == '__main__':
+    main()

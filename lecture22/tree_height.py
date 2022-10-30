@@ -34,7 +34,7 @@ def tree_height(node):
 
 # Main Execution
 
-if __name__ == '__main__':
+def main():
     # Create tree
     root = Node(7,
         Node(6,
@@ -49,3 +49,6 @@ if __name__ == '__main__':
 
     # Compute height of tree
     print(tree_height(root))
+
+if __name__ == '__main__':
+    main()
