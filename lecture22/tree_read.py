@@ -35,6 +35,7 @@ def tree_read(array, index=0):
 # Main Execution
 
 def main():
+    ''' For each line, read the BFS tree and print out the root node '''
     for line in sys.stdin:
         strs = line.split()             # Separate individual strings in line
         ints = [int(s) for s in strs]   # Convert each string into an int and collec into list
