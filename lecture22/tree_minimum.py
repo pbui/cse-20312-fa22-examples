@@ -38,11 +38,11 @@ if __name__ == '__main__':
     # Create tree
     root = Node(7,
         Node(6,
-                Node(4, None, None),
+                Node(4),
                 None),
         Node(5,
-                Node(3, None, None),
-                Node(2, None, None),
+                Node(3),
+                Node(2),
     ))
 
     # Compute minimum of tree
