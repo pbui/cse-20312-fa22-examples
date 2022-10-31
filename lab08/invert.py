@@ -3,19 +3,19 @@
 '''
 Title:      invert.py
 Abstract:   Invert binary tree.
-Author:     Peter Bui
-Email:      pbui@nd.edu
+Author:     Domer McDomerson
+Email:      dmcdomer@nd.edu
 Estimate:   25 minutes
 Date:       11/01/2022
 Questions:
 
     1. What is the worst-case time complexity of tree_invert()?
 
-        O(n)
+        ????
 
     2. How do you swap two values in Python without a temporary value?
 
-        a, b = b, a
+        ????
 '''
 
 import sys

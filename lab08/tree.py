@@ -3,8 +3,8 @@
 '''
 Title:      tree.py
 Abstract:   Implement a binary tree read and walk functions.
-Author:     Peter Bui
-Email:      pbui@nd.edu
+Author:     Domer McDomerson
+Email:      dmcdomer@nd.edu
 Estimate:   25 minutes
 Date:       11/01/2022
 Questions:
