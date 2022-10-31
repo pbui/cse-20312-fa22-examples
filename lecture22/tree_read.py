@@ -22,7 +22,7 @@ class Node:
 def tree_read(array, index=0):
     ''' Use divide and conquer to read binary tree in BFS format '''
     # Base Case: Invalid Node
-    if index >= len(array):
+    if index >= len(array) or not array[index]:
         return None
 
     # Divide and Conquer and Combine
