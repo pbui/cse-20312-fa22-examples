@@ -28,7 +28,7 @@ from dataclasses import dataclass
 
 @dataclass
 class Node:
-    ''' Simple Node with string key and int value. '''
+    ''' Simple Node with value and left and right children. '''
     pass
 
 class Set:
