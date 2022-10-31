@@ -7,7 +7,7 @@ Author:     Domer McDomerson
 Email:      dmcdomer@nd.edu
 Estimate:   30 minutes
 Date:       10/31/2022
-Questiones:
+Questions:
 
     1. What is the worst-case time complexity of fill_cups()?
 

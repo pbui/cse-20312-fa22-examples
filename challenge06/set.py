@@ -7,6 +7,19 @@ Author:     Domer McDomerson
 Email:      dmcdomer@nd.edu
 Estimate:   30 minutes
 Date:       10/31/2022
+Questions:
+
+    1. What is the average time complexity insert()?
+
+        ????
+    
+    2. What is the worst-case time complexity insert()?
+
+        ????
+
+    3. What is the base case for the _insert() and _search() methods?
+
+        ???
 '''
 
 from dataclasses import dataclass
