@@ -3,8 +3,8 @@
 '''
 Title:      treap.py
 Abstract:   Implement a Map class using a treap.
-Author:     Peter Bui
-Email:      pbui@nd.edu
+Author:     Domer McDomerson
+Email:      dmcdomer@nd.edu
 Estimate:   30 minutes
 Date:       11/07/2022
 Questions:

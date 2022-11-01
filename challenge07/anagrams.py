@@ -3,8 +3,8 @@
 '''
 Title:      anagrams.py
 Abstract:   Determine if two words are anagrams.
-Author:     Peter Bui
-Email:      pbui@nd.edu
+Author:     Domer McDomerson
+Email:      dmcdomer@nd.edu
 Estimate:   30 minutes
 Date:       11/07/2022
 Questions:
