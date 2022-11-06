@@ -2,18 +2,23 @@
 
 ''' Cheatsheet of common set operations in Python. '''
 
-set1 = set()                # Empty set
-set2 = set(['a', 'b', 'a']) # Set from list
+# Empty set
+set1 = set()                
+
+# Initialized set
+set2 = set(['a', 'b', 'a'])
 
 # Print length and contents
-print(len(set1), set1)
 print(len(set2), set2)
+
+# Search for value in set
+print('a' in set2)
 
 # Insert into set
 set1.add('a')
 set1.add('b')
 
-# Iterate through set
+# Iterate through values in set
 for value in set1:
     print(value)
 
