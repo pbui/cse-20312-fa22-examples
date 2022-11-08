@@ -43,7 +43,7 @@ def load_words_list(words_path=WORDS_PATH):
     True
 
     >>> 'notre' in words
-    False
+    True
     
     >>> 'dame' in words
     True
@@ -64,7 +64,7 @@ def load_words_set(words_path=WORDS_PATH):
     True
 
     >>> 'notre' in words
-    False
+    True
     
     >>> 'dame' in words
     True
@@ -91,11 +91,9 @@ def main(stream=sys.stdin, use_set=False):
     >>> import copy, io
     >>> sio = io.StringIO('Notre Dame Football\\nFreeman era\\nJust runthedamnball\\n') 
     >>> main(copy.copy(sio))
-    Notre
     runthedamnball
     
     >>> main(copy.copy(sio), True)
-    Notre
     runthedamnball
     '''
     pass
