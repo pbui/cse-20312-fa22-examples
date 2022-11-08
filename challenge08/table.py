@@ -13,7 +13,7 @@ Questions:
 
         ????
 
-    2. What is worst-case time complexity of Map.search()?
+    2. What is worst-case time complexity of Map.lookup()?
 
         ????
 
