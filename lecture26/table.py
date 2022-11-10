@@ -40,4 +40,4 @@ class Set:
         True
         '''
         bucket = hash(value) % len(self.buckets)
-        return self.buckets[bucket]
+        return self.buckets[bucket] == value
