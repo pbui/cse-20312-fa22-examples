@@ -13,16 +13,16 @@ import sys
 
 def read_graph():
     ''' Read in undirected graph '''
-    g = collections.defaultdict(dict)
+    graph = collections.defaultdict(dict)
     for line in sys.stdin:
         source, target, weight = line.split()
-        g[source][target] = int(weight)
-        g[target][source] = int(weight)
-    return g
+        graph[source][target] = int(weight)
+        graph[target][source] = int(weight)
+    return graph
 
 # Compute SSSP
 
-def compute_sssp(g, start):
+def compute_sssp(graph, start):
     ''' Use Dijkstra's Algorithm to compute the single-source shortest path '''
     frontier = []
     visited  = {}
@@ -37,37 +37,40 @@ def compute_sssp(g, start):
 
         visited[target] = source
 
-        for neighbor, cost in g[target].items():
+        for neighbor, cost in graph[target].items():
             heapq.heappush(frontier, (weight + cost, target, neighbor))
 
     return visited
 
-def reconstruct_path(visited, source, target):
+def reconstruct_path(graph, visited, source, target):
     ''' Reconstruct path from source to target '''
     path = []
     curr = target
+    cost = 0
 
     while curr != source:
         path.append(curr)
-        curr = visited[curr]
+        prev  = visited[curr]
+        cost += graph[prev][curr]
+        curr  = prev
 
     path.append(source)
-    return reversed(path)
+    return reversed(path), cost
 
 # Main Execution
 
 def main():
     # Read Graph
-    g = read_graph()
+    graph   = read_graph()
 
     # Compute SSSP
-    s = list(g.keys())[0]
-    v = compute_sssp(g, s)
+    start   = min(graph.keys())
+    visited = compute_sssp(graph, start)
 
     # Reconstruct Path
-    for t in list(g.keys())[1:]:
-        path = reconstruct_path(v, s, t)
-        print('{} -> {} = {}'.format(s, t, ' '.join(path)))
+    for target in list(graph.keys())[1:]:
+        path, cost = reconstruct_path(graph, visited, start, target)
+        print(f'{start} -> {target} = {cost}, {" ".join(path)}')
 
 if __name__ == '__main__':
     main()
