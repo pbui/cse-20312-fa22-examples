@@ -12,12 +12,11 @@ import sys
 # Build Graph
 
 def read_graph():
-    ''' Read in undirected graph '''
+    ''' Read in directed graph '''
     graph = collections.defaultdict(dict)
     for line in sys.stdin:
         source, target, weight = line.split()
         graph[source][target] = int(weight)
-        graph[target][source] = int(weight)
     return graph
 
 # Compute SSSP
