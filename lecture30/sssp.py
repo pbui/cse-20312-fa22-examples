@@ -27,18 +27,18 @@ def compute_sssp(graph, start):
     frontier = []
     visited  = {}
 
-    heapq.heappush(frontier, (0, start, start))
+    heapq.heappush(frontier, (0, start))
 
     while frontier:
-        distance, source, target = heapq.heappop(frontier)
+        distance, vertex = heapq.heappop(frontier)
 
-        if target in visited:
+        if vertex in visited:
             continue
 
-        visited[target] = distance
+        visited[vertex] = distance
 
-        for neighbor, weight in graph[target].items():
-            heapq.heappush(frontier, (distance + weight, target, neighbor))
+        for neighbor, weight in graph[vertex].items():
+            heapq.heappush(frontier, (distance + weight, neighbor))
 
     return visited
 
