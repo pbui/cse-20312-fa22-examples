@@ -52,7 +52,7 @@ def main():
     visited = compute_sssp(graph, start)
 
     # Display Distances
-    for target in list(graph.keys())[1:]:
+    for target in sorted((graph.keys()))[1:]:
         print(f'{start} -> {target} = {visited[target]}')
 
 if __name__ == '__main__':
