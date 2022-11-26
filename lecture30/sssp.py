@@ -30,32 +30,17 @@ def compute_sssp(graph, start):
     heapq.heappush(frontier, (0, start, start))
 
     while frontier:
-        weight, source, target = heapq.heappop(frontier)
+        distance, source, target = heapq.heappop(frontier)
 
         if target in visited:
             continue
 
-        visited[target] = source
+        visited[target] = distance
 
-        for neighbor, cost in graph[target].items():
-            heapq.heappush(frontier, (weight + cost, target, neighbor))
+        for neighbor, weight in graph[target].items():
+            heapq.heappush(frontier, (distance + weight, target, neighbor))
 
     return visited
-
-def reconstruct_path(graph, visited, source, target):
-    ''' Reconstruct path from source to target '''
-    path = []
-    curr = target
-    cost = 0
-
-    while curr != source:
-        path.append(curr)
-        prev  = visited[curr]
-        cost += graph[prev][curr]
-        curr  = prev
-
-    path.append(source)
-    return reversed(path), cost
 
 # Main Execution
 
@@ -67,10 +52,9 @@ def main():
     start   = min(graph.keys())
     visited = compute_sssp(graph, start)
 
-    # Reconstruct Path
+    # Display Distances
     for target in list(graph.keys())[1:]:
-        path, cost = reconstruct_path(graph, visited, start, target)
-        print(f'{start} -> {target} = {cost}, {" ".join(path)}')
+        print(f'{start} -> {target} = {visited[target]}')
 
 if __name__ == '__main__':
     main()
