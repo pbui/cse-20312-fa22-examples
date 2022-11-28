@@ -38,6 +38,17 @@ def compute_sssp(graph, start):
 
     return visited
 
+def reconstruct_path(visited, source, target):
+    path = []
+    curr = target
+
+    while curr != source:
+        path.append(curr)
+        curr = visited[curr]
+
+    path.append(source)
+    return reversed(path)
+
 # Compute MST
 
 def compute_mst(graph, start):
@@ -56,17 +67,6 @@ def compute_mst(graph, start):
             heapq.heappush(frontier, (weight, neighbor, target))
 
     return visited
-
-def reconstruct_path(visited, source, target):
-    path = []
-    curr = target
-
-    while curr != source:
-        path.append(curr)
-        curr = visited[curr]
-
-    path.append(source)
-    return reversed(path)
 
 # Main Execution
 
